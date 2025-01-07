@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorib Site | TemurCoder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+    <nav class="max-w-[1300px] mx-auto flex py-6 items-center justify-between">
+        <div class="flex items-center gap-6">
+            <a href="#" class="md:flex hidden lg:w-auto w-[140px]">
+                <img src="assets/img/logo.png.webp" alt="logo">
+            </a>
+            <div class="search rounded-3xl flex items-center md:w-fit w-full border-inpBorder border-2">
+                <input type="text" class="lg:w-[400px] md:w-[300px] px-4 lg:py-3 py-2 outline-none rounded-3xl" id="search-inp"
+                    placeholder="Search book by author or publisher">
+                <img src="assets/svg/search.svg" class="px-3 w-[46px]" alt="search">
+            </div>
+        </div>
+        <div class="flex items-center gap-6">
+            <a href="#" class="faq">FAQ</a>
+            <a href="#" class="Track Order">Track Order</a>
+            <div class="relative cursor-pointer">
+                <img src="assets/svg/shopping-cart.svg" class="lg:w-[40px] w-[30px]" alt="shopping-cart">
+                <div class="absolute z-10 bg-redColor w-5 h-5 text-[12px] top-[-8px] right-[-7px] rounded-full flex items-center justify-center text-colorWhite font-semibold">0</div>
+            </div>
+            <div class="bg-buttonColor cursor-pointer rounded-3xl text-colorWhite font-semibold px-8 py-3">Sign In</div>
+        </div>
+    </nav>
+</body>
+
+</html>
