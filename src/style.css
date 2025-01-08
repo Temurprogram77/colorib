@@ -68,9 +68,21 @@
   position: fixed;
 }
 .splide__pagination {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 .splide__pagination__page.is-active {
   background-color: #fff;
+}
+.img {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.image1 {
+  background-image: url(../assets/img/hero1.webp);
+}
+.image2 {
+  background-image: url(../assets/img/hero2.webp);
 }
