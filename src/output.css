@@ -727,6 +727,27 @@ video {
   outline-offset: 2px;
 }
 
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.hover\:text-\[\]:hover {
+  color: ;
+}
+
+.hover\:text-colorRed:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 22 22 / var(--tw-text-opacity, 1));
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
