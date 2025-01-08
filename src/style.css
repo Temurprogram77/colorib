@@ -10,7 +10,7 @@
 .sign {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
-  background-color: #FF1616;
+  background-color: #ff1616;
   background-image: none;
   color: #fff;
   cursor: pointer;
@@ -56,6 +56,13 @@
   transition: transform 0.2s;
 }
 .sign:hover .new {
-  background-color: #CF0F0F;
+  background-color: #cf0f0f;
   transform: translateX(0);
+}
+.section {
+  height: 1000px;
+}
+.bg-header {
+  top: 0;
+  position: fixed;
 }
