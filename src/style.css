@@ -67,3 +67,10 @@
   top: 0;
   position: fixed;
 }
+.splide__pagination {
+    display: flex;
+    gap: 0.5rem;
+}
+.splide__pagination__page.is-active {
+  background-color: #fff;
+}
