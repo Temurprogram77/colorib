@@ -611,12 +611,12 @@ video {
   width: 100%;
 }
 
-.max-w-\[1000px\] {
-  max-width: 1000px;
-}
-
 .max-w-\[1300px\] {
   max-width: 1300px;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
 }
 
 .cursor-pointer {
@@ -664,6 +664,11 @@ video {
 .bg-redColor {
   --tw-bg-opacity: 1;
   background-color: rgb(255 22 22 / var(--tw-bg-opacity, 1));
+}
+
+.bg-navbarColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 244 244 / var(--tw-bg-opacity, 1));
 }
 
 .px-3 {

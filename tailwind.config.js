@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundColor: {
         bodyColor: '#FEF4F4',
-        mavbarColor: '#FEF4F4',
+        navbarColor: '#FEF4F4',
         buttonColor: '#FF1616',
         redColor: '#FF1616',
         buttonColorHover: '#CF0F0F',
