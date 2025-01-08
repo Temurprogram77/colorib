@@ -709,6 +709,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-bodyColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 244 244 / var(--tw-bg-opacity, 1));
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
