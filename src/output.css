@@ -587,44 +587,12 @@ video {
   display: none;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-3 {
-  height: 0.75rem;
-}
-
 .h-5 {
   height: 1.25rem;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-\[40px\] {
-  width: 40px;
-}
-
-.w-\[46px\] {
-  width: 46px;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[200px\] {
-  width: 200px;
-}
-
-.w-\[100px\] {
-  width: 100px;
+.w-5 {
+  width: 1.25rem;
 }
 
 .w-\[140px\] {
@@ -635,16 +603,16 @@ video {
   width: 30px;
 }
 
-.w-3 {
-  width: 0.75rem;
-}
-
-.w-5 {
-  width: 1.25rem;
+.w-\[46px\] {
+  width: 46px;
 }
 
 .w-full {
   width: 100%;
+}
+
+.max-w-\[1000px\] {
+  max-width: 1000px;
 }
 
 .max-w-\[1300px\] {
@@ -688,12 +656,12 @@ video {
   border-color: rgb(222 224 230 / var(--tw-border-opacity, 1));
 }
 
-.bg-redColor {
+.bg-buttonColor {
   --tw-bg-opacity: 1;
   background-color: rgb(255 22 22 / var(--tw-bg-opacity, 1));
 }
 
-.bg-buttonColor {
+.bg-redColor {
   --tw-bg-opacity: 1;
   background-color: rgb(255 22 22 / var(--tw-bg-opacity, 1));
 }
@@ -708,41 +676,6 @@ video {
   padding-right: 1rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-
-.px-9 {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-}
-
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -753,8 +686,14 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.text-\[10px\] {
-  font-size: 10px;
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .text-\[12px\] {
@@ -770,10 +709,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.text-\[\] {
-  color: ;
-}
-
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -782,10 +717,6 @@ video {
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
-  }
-
-  .md\:w-\[\] {
-    width: ;
   }
 
   .md\:w-\[300px\] {
@@ -799,20 +730,16 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-\[\] {
-    width: ;
-  }
-
-  .lg\:w-auto {
-    width: auto;
+  .lg\:w-\[400px\] {
+    width: 400px;
   }
 
   .lg\:w-\[40px\] {
     width: 40px;
   }
 
-  .lg\:w-\[400px\] {
-    width: 400px;
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:py-3 {
