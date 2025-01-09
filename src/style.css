@@ -89,3 +89,21 @@
 .image3 {
   background-image: url(../assets/img/hero3.webp);
 }
+.splide__arrow--next svg:hover, .splide__arrow--prev svg:hover {
+  fill: #FF1616;
+  cursor: pointer;
+}
+.splide__arrow--next svg, .splide__arrow--prev svg {
+  fill: #BBBFCC;
+  width: 80px;
+}
+.splide__arrow--prev {
+  position: absolute;
+  left: -30px;
+  background: transparent;
+}
+.splide__arrow--next {
+  position: absolute;
+  right: -30px;
+  background: transparent;
+}

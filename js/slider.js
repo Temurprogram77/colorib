@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
   splide1.mount();
 
   var splide2 = new Splide("#splide", {
-    perPage: 5,
+    perPage: 6,
     autoplay: true,
     snap: true,
+    pagination: false,
     type: "loop",
-    focus: "center",
+    focus: "start",
   });
   splide2.mount();
 });
