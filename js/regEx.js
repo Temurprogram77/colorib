@@ -5,7 +5,6 @@ let wrong = document.querySelector(".wrong");
 let wrong2 = document.querySelector(".wrong2");
 
 btn.addEventListener("click", () => {
-//   e.preventDefault();
   const emailRegEx = /[a-z0-9]{6,12}@gmail/;
   const passwordRegEx = /^[0-9]{8,12}$/;
   let emailValue = email.value;
