@@ -607,6 +607,15 @@ video {
   height: 1.25rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.max-h-fit {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -654,6 +663,15 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-\[\] {
+  max-width: ;
+}
+
+.max-w-fit {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .cursor-pointer {
