@@ -180,3 +180,9 @@ inp.addEventListener("input", () => {
     data.appendChild(card);
   });
 });
+
+let cart_btn = document.querySelector('.cart_btn');
+
+cart_btn.addEventListener('click', ()=>{
+  window.location.href();
+})
