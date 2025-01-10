@@ -594,6 +594,26 @@ video {
   top: -10px;
 }
 
+.top-\[100px\] {
+  top: 100px;
+}
+
+.top-\[90px\] {
+  top: 90px;
+}
+
+.top-\[70px\] {
+  top: 70px;
+}
+
+.top-\[80px\] {
+  top: 80px;
+}
+
+.top-\[85px\] {
+  top: 85px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -840,6 +860,14 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .rounded {
