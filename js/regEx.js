@@ -10,11 +10,18 @@ btn.addEventListener("click", () => {
   let emailValue = email.value;
   let passwordValue = password.value;
   if (emailRegEx.test(emailValue) && passwordRegEx.test(passwordValue)) {
-    window.location.href = '/index.html';
+    window.location.href = "/index.html";
   } else {
-    email.style.border = "2px solid red" 
-    password.style.border = "2px solid red" 
+    email.style.border = "2px solid red";
+    password.style.border = "2px solid red";
     wrong.textContent = "Please enter your email [a-z] [6-12] @gmail.com";
-    wrong2.textContent = "Please enter your password (only numbers [8-12])"
+    wrong2.textContent = "Please enter your password (only numbers [8-12])";
   }
+  event.preventDefault(); // Formni standart yuborilishini to'xtatadi
+
+  // Ma'lumotlarni localStorage ga saqlash
+  localStorage.setItem("email", email.value);
+  localStorage.setItem("password", password.value);
 });
+
+// Login formni boshqarish

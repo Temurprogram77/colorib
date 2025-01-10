@@ -181,8 +181,8 @@ inp.addEventListener("input", () => {
   });
 });
 
-let cart_btn = document.querySelector('.cart_btn');
+let cart_btn = document.querySelector(".cart_btn");
 
-cart_btn.addEventListener('click', ()=>{
-  window.location.href = '/public/cart.html';
-})
+cart_btn.addEventListener("click", () => {
+  window.location.href = "/public/cart.html";
+});
