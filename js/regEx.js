@@ -10,7 +10,9 @@ btn.addEventListener("click", () => {
   let emailValue = email.value;
   let passwordValue = password.value;
   if (emailRegEx.test(emailValue) && passwordRegEx.test(passwordValue)) {
-    window.location.href = "/index.html";
+    setTimeout(() => {
+      window.location.href = "/index.html";
+    }, 1000);
   } else {
     email.style.border = "2px solid red";
     password.style.border = "2px solid red";

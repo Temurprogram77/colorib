@@ -7,17 +7,6 @@ if (email) {
   welcomeMsg.textContent = firstLetter;
   welcomeMsg.classList.remove("hidden");
   sign.classList.add("hidden");
-} else {
-  sign.classList.remove("hidden");
-  sign.addEventListener("click", function () {
-    window.location.href = "/public/sign-in.html";
-  });
-}
-
-if (email) {
-  const firstLetter = email.charAt(0).toUpperCase();
-  welcomeMsg.textContent = firstLetter;
-  welcomeMsg.classList.remove("hidden");
 
   modalEmail.textContent = email;
 
@@ -25,15 +14,19 @@ if (email) {
     modal.classList.remove("hidden");
   });
 } else {
-  loginBtn.classList.remove("hidden");
-  loginBtn.addEventListener("click", function () {
-    window.location.href = "login.html";
+  sign.classList.remove("hidden");
+  sign.addEventListener("click", function () {
+    setTimeout(function () {
+      window.location.href = "/public/sign-in.html";
+    }, 1000);
   });
 }
 
 logoutBtn.addEventListener("click", function () {
   localStorage.clear();
-  window.location.reload();
+  setTimeout(() => {
+    window.location.reload();
+  }, 500);
 });
 
 modal.addEventListener("click", function (e) {
