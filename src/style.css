@@ -45,9 +45,7 @@
   display: block;
   font-weight: 900;
   overflow: hidden;
-  padding: 1.1rem 4rem;
   position: relative;
-  text-transform: uppercase;
 }
 .sign .new {
   display: grid;
