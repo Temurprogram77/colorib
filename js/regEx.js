@@ -16,6 +16,8 @@ btn.addEventListener("click", () => {
   } else {
     email.style.border = "2px solid red";
     password.style.border = "2px solid red";
+    wrong.style.color = "red";
+    wrong2.style.color = "red";
     wrong.textContent = "Please enter your email [a-z] [6-12] @gmail.com";
     wrong2.textContent = "Please enter your password (only numbers [8-12])";
   }

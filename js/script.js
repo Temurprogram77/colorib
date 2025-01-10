@@ -156,29 +156,37 @@ inp.addEventListener("input", () => {
   const searchText = books.filter((item) => {
     return item.name.toLowerCase().includes(inp.value.toLowerCase());
   });
-  searchText.forEach((book) => {
-    const card = document.createElement("div");
-    card.innerHTML = `
-      <div class="bg-whiteColor max-w-fit book">
-          <img src="${book.img}" class="" alt="book">
-          <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
-          <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
-          <div class="flex items-center ml-2">
-              <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-              <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-              <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-              <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-              <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-          </div>
-          <div class="flex justify-between items-end mx-3 pb-3">
-              <p class="text-[14px] font-normal">(${book.review} Review)</p>
-              <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
-          </div>
-      </div>
-  `;
 
-    data.appendChild(card);
-  });
+  if (searchText.length === 0) {
+    const noResults = document.createElement("div");
+    noResults.innerHTML =
+      "<p class='text-center text-lg my-4'>Hech narsa topilmadi</p>";
+    data.appendChild(noResults);
+  } else {
+    searchText.forEach((book) => {
+      const card = document.createElement("div");
+      card.innerHTML = `
+        <div class="bg-whiteColor max-w-fit book">
+            <img src="${book.img}" class="" alt="book">
+            <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+            <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+            <div class="flex items-center ml-2">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+            </div>
+            <div class="flex justify-between items-end mx-3 pb-3">
+                <p class="text-[14px] font-normal">(${book.review} Review)</p>
+                <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+            </div>
+        </div>
+      `;
+
+      data.appendChild(card);
+    });
+  }
 });
 
 let cart_btn = document.querySelector(".cart_btn");
