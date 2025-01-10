@@ -24,16 +24,17 @@
                     id="search-inp" placeholder="Search book by author or publisher">
                 <img src="assets/svg/search.svg" class="px-3 w-[46px]" alt="search">
             </div>
-            <div class="search-modal duration-200 bg-white w-[86%] h-[500px] overflow-y-scroll absolute top-[85px] z-20">
-                <div class="close_btn cursor-pointer absolute top-[10px] right-[10px]">
+            <div
+                class="search-modal duration-200 bg-white w-[100%] h-[700px] overflow-y-scroll hidden fixed top-[85px] left-0 p-10 z-20">
+                <div class="close_btn cursor-pointer absolute top-[10px] right-[20px]">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" fill="currentColor">
                         <path
                             d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z">
                         </path>
                     </svg>
                 </div>
-                <div class="data">
-                    
+                <div class="data flex flex-wrap gap-12 justify-start">
+
                 </div>
             </div>
         </div>
@@ -64,7 +65,7 @@
             <a href="#" class="hover:text-colorRed duration-300 content">Contact</a>
         </div>
     </div>
-    <div class="bg-bodyColor">
+    <div class="bg-bodyColor section1">
         <div class="splide max-w-[1300px] mx-auto">
             <div class="splide__track">
                 <div class="splide__list">
@@ -73,6 +74,11 @@
                             <div class="px-4 rounded-3xl text-black bg-whiteColor w-fit">Science Fiction</div>
                             <h2 class="text-[50px] text-center max-w-[300px] ">The History of Phipino</h2>
                             <div class="bg-redColor px-10 cursor-pointer py-3 rounded-3xl">Browse Store</div>
+                        </div>
+                        <div
+                            class="sign bg-buttonColor cursor-pointer rounded-3xl text-colorWhite font-semibold px-8 py-3">
+                            <div class="new">Sign In</div>
+                            <div class="old">Sign In</div>
                         </div>
                     </div>
                     <div class="splide__slide">
@@ -93,7 +99,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-bodyColor">
+    <div class="bg-bodyColor section2">
         <h2 class="mx-auto w-fit pt-11 pb-8 text-[30px] font-semibold">Best Selling Books Ever</h2>
         <div id="splide" class="splide max-w-[1300px] mx-auto">
             <div class="splide__track">
@@ -212,7 +218,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/data.js"></script>
     <script src="js/slider.js"></script>
 </body>
 

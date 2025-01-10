@@ -7,6 +7,9 @@
   border: 0 solid;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 0;
+}
 .sign {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
@@ -106,4 +109,7 @@
   position: absolute;
   right: -30px;
   background: transparent;
+}
+.book {
+  width: 200px;
 }
