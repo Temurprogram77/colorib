@@ -103,6 +103,50 @@ const books = [
     price: "$189",
   },
 ];
+const booksAll = [
+  {
+    img: "/assets/img/book1.webp",
+    name: "Independent Woman",
+    after: "J. R. Rain",
+    review: "120",
+    price: "$50",
+  },
+  {
+    img: "/assets/img/book2.webp",
+    name: "Queen bee",
+    after: "J. R. Rain",
+    review: "112",
+    price: "$56",
+  },
+  {
+    img: "/assets/img/book3.webp",
+    name: "Moon Dance",
+    after: "J. R. Rain",
+    review: "167",
+    price: "$62",
+  },
+  {
+    img: "/assets/img/book4.webp",
+    name: "Very Nice",
+    after: "J. R. Rain",
+    review: "120",
+    price: "$70",
+  },
+  {
+    img: "/assets/img/book5.webp",
+    name: "Evanesce",
+    after: "J. R. Rain",
+    review: "220",
+    price: "$56",
+  },
+  {
+    img: "/assets/img/book6.webp",
+    name: "Sin Eater",
+    after: "J. R. Rain",
+    review: "83",
+    price: "$40",
+  },
+];
 
 let data = document.querySelector(".data");
 let inp = document.querySelector("#search-inp");
@@ -157,6 +201,33 @@ books.forEach((book) => {
 
   data.appendChild(card);
 });
+
+let books2 = document.querySelector(".bookss");
+
+booksAll.forEach((book) => {
+  const books22 = document.createElement("div");
+  books22.innerHTML = `
+        <div class="bg-whiteColor max-w-fit book">
+            <img src="${book.img}" class="" alt="book">
+            <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+            <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+            <div class="flex items-center ml-2">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+            </div>
+            <div class="flex justify-between items-end mx-3 pb-3">
+                <p class="text-[14px] font-normal">(${book.review} Review)</p>
+                <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+            </div>
+        </div>
+    `;
+
+  books2.appendChild(books22);
+});
+
 
 // Search 0
 
