@@ -152,6 +152,7 @@ let data = document.querySelector(".data");
 let inp = document.querySelector("#search-inp");
 let section1 = document.querySelector(".section1");
 let section2 = document.querySelector(".section2");
+let books2 = document.querySelector(".bookss");
 
 // bosilish
 
@@ -201,8 +202,6 @@ books.forEach((book) => {
 
   data.appendChild(card);
 });
-
-let books2 = document.querySelector(".bookss");
 
 booksAll.forEach((book) => {
   const books22 = document.createElement("div");
