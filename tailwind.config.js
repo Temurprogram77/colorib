@@ -16,6 +16,7 @@ module.exports = {
       },
       borderColor: {
         inpBorder: '#DEE0E6',
+        borderAll: '#767676',
         cardBorder: '#EEE1E0',
       },
       textColor: {
