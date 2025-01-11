@@ -80,7 +80,7 @@
   color: white;
   display: flex;
   flex-direction: column;
-  height: 600px
+  height: 600px;
 }
 .image1 {
   background-image: url(../assets/img/hero1.webp);
@@ -91,12 +91,14 @@
 .image3 {
   background-image: url(../assets/img/hero3.webp);
 }
-.splide__arrow--next svg:hover, .splide__arrow--prev svg:hover {
-  fill: #FF1616;
+.splide__arrow--next svg:hover,
+.splide__arrow--prev svg:hover {
+  fill: #ff1616;
   cursor: pointer;
 }
-.splide__arrow--next svg, .splide__arrow--prev svg {
-  fill: #BBBFCC;
+.splide__arrow--next svg,
+.splide__arrow--prev svg {
+  fill: #bbbfcc;
   width: 80px;
 }
 .splide__arrow--prev {
@@ -114,4 +116,15 @@
 }
 .text {
   text-align: center;
+}
+#preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black url("/assets/img/loading2.gif") center center no-repeat;
+  background-size: 20%;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
 }
