@@ -7,6 +7,7 @@ if (email) {
   welcomeMsg.textContent = firstLetter;
   welcomeMsg.classList.remove("hidden");
   sign.classList.add("hidden");
+  
 
   modalEmail.textContent = email;
 
