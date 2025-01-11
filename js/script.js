@@ -115,6 +115,7 @@ const booksAll = [
     thriller: false,
     history: true,
     science: true,
+    more: true,
   },
   {
     img: "/assets/img/book2.webp",
@@ -127,6 +128,7 @@ const booksAll = [
     thriller: false,
     history: true,
     science: false,
+    more: true,
   },
   {
     img: "/assets/img/book3.webp",
@@ -139,6 +141,7 @@ const booksAll = [
     thriller: true,
     history: true,
     science: true,
+    more: true,
   },
   {
     img: "/assets/img/book4.webp",
@@ -151,6 +154,7 @@ const booksAll = [
     thriller: true,
     history: true,
     science: false,
+    more: true,
   },
   {
     img: "/assets/img/book5.webp",
@@ -163,6 +167,7 @@ const booksAll = [
     thriller: false,
     history: true,
     science: true,
+    more: true,
   },
   {
     img: "/assets/img/book6.webp",
@@ -175,6 +180,56 @@ const booksAll = [
     thriller: true,
     history: true,
     science: true,
+    more: true,
+  },
+
+  {
+    img: "/assets/img/book7.jpg",
+    name: "Patrick RothFuss",
+    after: "J. R. Rain",
+    review: "320",
+    price: "$121",
+    more: false,
+  },
+  {
+    img: "/assets/img/book8.jpg",
+    name: "Patrick RothFuss Second",
+    after: "J. R. Rain",
+    review: "366",
+    price: "$199",
+    more: false,
+  },
+  {
+    img: "/assets/img/book9.jpg",
+    name: "Life In Woods",
+    after: "J. R. Rain",
+    review: "123",
+    price: "$33",
+    more: false,
+  },
+  {
+    img: "/assets/img/book10.jpg",
+    name: "The Lion Wardrobe",
+    after: "J. R. Rain",
+    review: "45",
+    price: "$22",
+    more: false,
+  },
+  {
+    img: "/assets/img/book11.jpg",
+    name: "Harry Potter",
+    after: "J. R. Rain",
+    review: "626",
+    price: "$167",
+    more: false,
+  },
+  {
+    img: "/assets/img/book12.webp",
+    name: "Harry Potter 2",
+    after: "J. R. Rain",
+    review: "712",
+    price: "$189",
+    more: false,
   },
 ];
 
@@ -207,7 +262,7 @@ close_btn.addEventListener("click", () => {
   }, 100);
 });
 
-// render
+// ---render---
 
 books.forEach((book) => {
   const card = document.createElement("div");
@@ -233,31 +288,7 @@ books.forEach((book) => {
   data.appendChild(card);
 });
 
-booksAll.forEach((book) => {
-  const books22 = document.createElement("div");
-  books22.innerHTML = `
-        <div class="bg-whiteColor max-w-fit book">
-            <img src="${book.img}" class="" alt="book">
-            <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
-            <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
-            <div class="flex items-center ml-2">
-                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-            </div>
-            <div class="flex justify-between items-end mx-3 pb-3">
-                <p class="text-[14px] font-normal">(${book.review} Review)</p>
-                <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
-            </div>
-        </div>
-    `;
-
-  books2.appendChild(books22);
-});
-
-// sort qilish
+// ---sort qilish---
 
 let all = document.querySelector(".all");
 let horror = document.querySelector(".horror");
@@ -266,19 +297,144 @@ let science = document.querySelector(".science");
 let history = document.querySelector(".history");
 let btnMore = document.querySelector(".btn_more");
 
+// btnMore.addEventListener("click", () => {
+//   // Barcha `more: false` qiymatlarni `true` ga o'zgartirish
+//   booksAll.forEach((book) => {
+//     if (book.more === false) {
+//       book.more = true;
+//       console.log(`${book.name} endi more: true bo'ldi`);
+//     }
+//   });
+
+//   // Ekranni yangilash yoki yangi elementlarni qo'shish
+//   booksAll.forEach((book) => {
+//     if (book.more === true) {
+//       const books22 = document.createElement("div");
+
+//       books22.innerHTML = `
+//         <div class="bg-whiteColor max-w-fit book">
+//             <img src="${book.img}" class="" alt="book">
+//             <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+//             <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+//             <div class="flex items-center ml-2">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//             </div>
+//             <div class="flex justify-between items-end mx-3 pb-3">
+//                 <p class="text-[14px] font-normal">(${book.review} Review)</p>
+//                 <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+//             </div>
+//         </div>
+//       `;
+
+//       books2.appendChild(books22);
+//     }
+//   });
+
+//   console.log("Barcha `more: false` qiymatlar `true` ga o'zgartirildi!");
+// });
+
+console.log("Books Arrdagi Render Function To'g'ri Ishladi");
+
+// btnMore.addEventListener("click", () => {
+//   // `more: false` qiymatlarni `true` ga o'zgartirish
+//   booksAll.forEach((book) => {
+//     if (book.more === false) {
+//       book.more = true;
+//       console.log(`${book.name} endi more: true bo'ldi`);
+//     }
+//   });
+
+//   // Faqat yangi kitoblarni qo'shish
+//   booksAll.forEach((book) => {
+//     if (book.more === true && !document.getElementById(`book-${book.name}`)) {
+//       const books22 = document.createElement("div");
+//       books22.id = `book-${book.name}`; // Har bir kitob uchun unique ID
+
+//       books22.innerHTML = `
+//         <div class="bg-whiteColor max-w-fit book">
+//             <img src="${book.img}" class="" alt="book">
+//             <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+//             <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+//             <div class="flex items-center ml-2">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//                 <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+//             </div>
+//             <div class="flex justify-between items-end mx-3 pb-3">
+//                 <p class="text-[14px] font-normal">(${book.review} Review)</p>
+//                 <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+//             </div>
+//         </div>
+//       `;
+
+//       books2.appendChild(books22);
+//     }
+//   });
+
+//   console.log("Barcha `more: false` qiymatlar `true` ga o'zgartirildi!");
+// });
+
+
+function renderBooks() {
+  booksAll.forEach((book) => {
+    if (book.more === true && !document.getElementById(`book-${book.name}`)) {
+      const bookDiv = document.createElement("div");
+      bookDiv.id = `book-${book.name}`;
+      bookDiv.classList.add("bg-whiteColor", "max-w-fit", "book");
+
+      bookDiv.innerHTML = `
+        <img src="${book.img}" class="" alt="book">
+        <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+        <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+        <div class="flex items-center ml-2">
+          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+        </div>
+        <div class="flex justify-between items-end mx-3 pb-3">
+          <p class="text-[14px] font-normal">(${book.review} Review)</p>
+          <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+        </div>
+      `;
+      books2.appendChild(bookDiv);
+    }
+  });
+}
 btnMore.addEventListener("click", () => {
-  console.log("salom");
-  let arr = [
-    booksAll.push({
-      img: "/assets/img/book7.jpg",
-      name: "Patrick RothFuss",
-      after: "J. R. Rain",
-      review: "320",
-      price: "$121",
-    }),
-  ];
-  console.log(typeof arr);
+  booksAll.forEach((book) => {
+    if (book.more === false) {
+      book.more = true;
+      console.log(`${book.name} endi more: true bo'ldi`);
+    }
+  });
+  renderBooks();
 });
+
+renderBooks();
+
+console.log("Render Function To'g'ri Ishladi");
+
+// btnMore.addEventListener("click", () => {
+//   console.log("salom");
+//   let arr = [
+//     booksAll.push({
+//       img: "/assets/img/book7.jpg",
+//       name: "Patrick RothFuss",
+//       after: "J. R. Rain",
+//       review: "320",
+//       price: "$121",
+//     }),
+//   ];
+//   console.log(typeof arr);
+// });
 all.addEventListener("click", () => {
   books2.innerHTML = "";
   let filterAll = booksAll.filter((item) => item.isAll == true);
