@@ -110,6 +110,11 @@ const booksAll = [
     after: "J. R. Rain",
     review: "120",
     price: "$50",
+    isAll: true,
+    horror: false,
+    thriller: false,
+    history: true,
+    science: true,
   },
   {
     img: "/assets/img/book2.webp",
@@ -117,6 +122,11 @@ const booksAll = [
     after: "J. R. Rain",
     review: "112",
     price: "$56",
+    isAll: true,
+    horror: false,
+    thriller: false,
+    history: true,
+    science: false,
   },
   {
     img: "/assets/img/book3.webp",
@@ -124,6 +134,11 @@ const booksAll = [
     after: "J. R. Rain",
     review: "167",
     price: "$62",
+    isAll: true,
+    horror: true,
+    thriller: true,
+    history: true,
+    science: true,
   },
   {
     img: "/assets/img/book4.webp",
@@ -131,6 +146,11 @@ const booksAll = [
     after: "J. R. Rain",
     review: "120",
     price: "$70",
+    isAll: true,
+    horror: false,
+    thriller: true,
+    history: true,
+    science: false,
   },
   {
     img: "/assets/img/book5.webp",
@@ -138,6 +158,11 @@ const booksAll = [
     after: "J. R. Rain",
     review: "220",
     price: "$56",
+    isAll: true,
+    horror: true,
+    thriller: false,
+    history: true,
+    science: true,
   },
   {
     img: "/assets/img/book6.webp",
@@ -145,6 +170,11 @@ const booksAll = [
     after: "J. R. Rain",
     review: "83",
     price: "$40",
+    isAll: true,
+    horror: true,
+    thriller: true,
+    history: true,
+    science: true,
   },
 ];
 
@@ -227,8 +257,193 @@ booksAll.forEach((book) => {
   books2.appendChild(books22);
 });
 
+// sort qilish
 
-// Search 0
+let all = document.querySelector(".all");
+let horror = document.querySelector(".horror");
+let thriller = document.querySelector(".thriller");
+let science = document.querySelector(".science");
+let history = document.querySelector(".history");
+let btnMore = document.querySelector(".btn_more");
+
+btnMore.addEventListener("click", () => {
+  console.log("salom");
+  let arr = [
+    booksAll.push({
+      img: "/assets/img/book7.jpg",
+      name: "Patrick RothFuss",
+      after: "J. R. Rain",
+      review: "320",
+      price: "$121",
+    }),
+  ];
+  console.log(typeof arr);
+});
+all.addEventListener("click", () => {
+  books2.innerHTML = "";
+  let filterAll = booksAll.filter((item) => item.isAll == true);
+  console.log(filterAll);
+
+  all.classList.add("activeBtn");
+  science.classList.remove("activeBtn");
+  horror.classList.remove("activeBtn");
+  thriller.classList.remove("activeBtn");
+  history.classList.remove("activeBtn");
+  filterAll.forEach((book) => {
+    const books22 = document.createElement("div");
+    books22.innerHTML = `
+        <div class="bg-whiteColor max-w-fit book">
+            <img src="${book.img}" class="" alt="book">
+            <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+            <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+            <div class="flex items-center ml-2">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+            </div>
+            <div class="flex justify-between items-end mx-3 pb-3">
+                <p class="text-[14px] font-normal">(${book.review} Review)</p>
+                <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+            </div>
+        </div>
+    `;
+    books2.appendChild(books22);
+  });
+});
+horror.addEventListener("click", () => {
+  books2.innerHTML = "";
+  let filterHorror = booksAll.filter((item) => item.horror == true);
+  console.log(filterHorror);
+  books2.classList.remove("justify-between");
+  books2.classList.add("justify-start");
+  books2.classList.add("gap-2");
+  horror.classList.add("activeBtn");
+  science.classList.remove("activeBtn");
+  all.classList.remove("activeBtn");
+  thriller.classList.remove("activeBtn");
+  history.classList.remove("activeBtn");
+  filterHorror.forEach((book) => {
+    const books22 = document.createElement("div");
+    books22.innerHTML = `
+        <div class="bg-whiteColor max-w-fit book">
+            <img src="${book.img}" class="" alt="book">
+            <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+            <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+            <div class="flex items-center ml-2">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+            </div>
+            <div class="flex justify-between items-end mx-3 pb-3">
+                <p class="text-[14px] font-normal">(${book.review} Review)</p>
+                <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+            </div>
+        </div>
+    `;
+    books2.appendChild(books22);
+  });
+});
+thriller.addEventListener("click", () => {
+  books2.innerHTML = "";
+  let filterThriller = booksAll.filter((item) => item.thriller == true);
+  console.log(filterThriller);
+  thriller.classList.add("activeBtn");
+  science.classList.remove("activeBtn");
+  all.classList.remove("activeBtn");
+  horror.classList.remove("activeBtn");
+  history.classList.remove("activeBtn");
+  filterThriller.forEach((book) => {
+    const books22 = document.createElement("div");
+    books22.innerHTML = `
+        <div class="bg-whiteColor max-w-fit book">
+            <img src="${book.img}" class="" alt="book">
+            <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+            <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+            <div class="flex items-center ml-2">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+            </div>
+            <div class="flex justify-between items-end mx-3 pb-3">
+                <p class="text-[14px] font-normal">(${book.review} Review)</p>
+                <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+            </div>
+        </div>
+    `;
+    books2.appendChild(books22);
+  });
+});
+science.addEventListener("click", () => {
+  books2.innerHTML = "";
+  let filterScience = booksAll.filter((item) => item.science == true);
+  console.log(filterScience);
+  science.classList.add("activeBtn");
+  all.classList.remove("activeBtn");
+  horror.classList.remove("activeBtn");
+  thriller.classList.remove("activeBtn");
+  history.classList.remove("activeBtn");
+  filterScience.forEach((book) => {
+    const books22 = document.createElement("div");
+    books22.innerHTML = `
+        <div class="bg-whiteColor max-w-fit book">
+            <img src="${book.img}" class="" alt="book">
+            <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+            <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+            <div class="flex items-center ml-2">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+            </div>
+            <div class="flex justify-between items-end mx-3 pb-3">
+                <p class="text-[14px] font-normal">(${book.review} Review)</p>
+                <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+            </div>
+        </div>
+    `;
+    books2.appendChild(books22);
+  });
+});
+history.addEventListener("click", () => {
+  books2.innerHTML = "";
+  let filterHistory = booksAll.filter((item) => item.history == true);
+  console.log(filterHistory);
+  history.classList.add("activeBtn");
+  science.classList.remove("activeBtn");
+  all.classList.remove("activeBtn");
+  horror.classList.remove("activeBtn");
+  thriller.classList.remove("activeBtn");
+  filterHistory.forEach((book) => {
+    const books22 = document.createElement("div");
+    books22.innerHTML = `
+        <div class="bg-whiteColor max-w-fit book">
+            <img src="${book.img}" class="" alt="book">
+            <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+            <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+            <div class="flex items-center ml-2">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+            </div>
+            <div class="flex justify-between items-end mx-3 pb-3">
+                <p class="text-[14px] font-normal">(${book.review} Review)</p>
+                <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+            </div>
+        </div>
+    `;
+    books2.appendChild(books22);
+  });
+});
+// Search
 
 inp.addEventListener("input", () => {
   data.innerHTML = "";

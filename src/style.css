@@ -113,6 +113,11 @@
 }
 .book {
   width: 200px;
+  cursor: pointer;
+}
+.book:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.126);
+  transition: box-shadow 0.3s;
 }
 .text {
   text-align: center;
@@ -127,4 +132,66 @@
   width: 100%;
   position: fixed;
   z-index: 10000;
+}
+.activeBtn {
+  background: #ff1616;
+  color: #fff;
+}
+
+/* btnt */
+
+.btn_more,
+.btn_more *,
+.btn_more:after,
+.btn_more:before,
+.btn_more:after,
+.btn_more:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn_more {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+}
+.btn_more:disabled {
+  cursor: default;
+}
+.btn_more:-moz-focusring {
+  outline: auto;
+}
+.btn_more svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn_more [hidden] {
+  display: none;
+}
+.btn_more {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn_more span {
+  mix-blend-mode: lighten;
+}
+.btn_more:hover {
+  color: #fff;
+}
+.btn_more:before {
+  background: #FF1616;
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateY(var(--progress, -100%));
+  transition: transform 0.2s ease;
+}
+.btn_more:hover:before {
+  --progress: 0;
 }
