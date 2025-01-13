@@ -582,6 +582,10 @@ video {
   right: 7rem;
 }
 
+.right-3 {
+  right: 0.75rem;
+}
+
 .right-4 {
   right: 1rem;
 }
@@ -590,12 +594,24 @@ video {
   right: -7px;
 }
 
+.right-\[0\] {
+  right: 0;
+}
+
 .right-\[20px\] {
   right: 20px;
 }
 
 .top-20 {
   top: 5rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.top-\[-350px\] {
+  top: -350px;
 }
 
 .top-\[-8px\] {
@@ -610,6 +626,10 @@ video {
   top: 85px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -618,12 +638,12 @@ video {
   z-index: 20;
 }
 
-.z-30 {
-  z-index: 30;
-}
-
 .z-40 {
   z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .z-\[999\] {
@@ -704,8 +724,8 @@ video {
   height: 1.25rem;
 }
 
-.h-\[180px\] {
-  height: 180px;
+.h-\[140px\] {
+  height: 140px;
 }
 
 .h-\[20px\] {
@@ -714,6 +734,10 @@ video {
 
 .h-\[320px\] {
   height: 320px;
+}
+
+.h-\[350px\] {
+  height: 350px;
 }
 
 .h-\[40px\] {
@@ -846,6 +870,10 @@ video {
   justify-content: space-between;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .gap-12 {
   gap: 3rem;
 }
@@ -888,6 +916,10 @@ video {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .rounded-md {
@@ -1102,10 +1134,6 @@ video {
   font-size: 20px;
 }
 
-.text-\[30px\] {
-  font-size: 30px;
-}
-
 .text-\[35px\] {
   font-size: 35px;
 }
@@ -1180,6 +1208,11 @@ video {
   transition-duration: 300ms;
 }
 
+.hover\:bg-greyColor:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(144 151 167 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-red-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
@@ -1215,6 +1248,10 @@ video {
     margin-right: 1.75rem;
   }
 
+  .sm\:h-\[160px\] {
+    height: 160px;
+  }
+
   .sm\:max-w-fit {
     max-width: -moz-fit-content;
     max-width: fit-content;
@@ -1236,6 +1273,10 @@ video {
 
   .sm\:text-\[23px\] {
     font-size: 23px;
+  }
+
+  .sm\:text-\[24px\] {
+    font-size: 24px;
   }
 }
 
@@ -1260,6 +1301,10 @@ video {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-\[180px\] {
+    height: 180px;
   }
 
   .md\:h-auto {

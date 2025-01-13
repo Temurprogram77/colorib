@@ -236,10 +236,21 @@ const booksAll = [
 // menu btn
 
 let menu_modal = document.querySelector('.menu_modal')
+let a = document.querySelector('.menu_modal a')
 let menu = document.querySelector('.menu')
+let close_btn_menu = document.querySelector('.close_btn_menu')
 
 menu.addEventListener('click', () => {
-  menu_modal.classList.toggle('hidden')
+  menu_modal.classList.remove('top-[-350px]')
+  menu_modal.classList.add('top-0')
+})
+close_btn_menu.addEventListener('click', () => {
+  menu_modal.classList.remove('top-0')
+  menu_modal.classList.add('top-[-350px]')
+})
+a.addEventListener('click', () => {
+  menu_modal.classList.remove('top-0')
+  menu_modal.classList.add('top-[-350px]')
 })
 
 let data = document.querySelector(".data");
@@ -248,6 +259,9 @@ let inp_btn = document.querySelector(".search");
 let section1 = document.querySelector(".section1");
 let section2 = document.querySelector(".section2");
 let section3 = document.querySelector(".section3");
+let section4 = document.querySelector(".section4");
+let section5 = document.querySelector(".section5");
+let section6 = document.querySelector(".section6");
 let books2 = document.querySelector(".bookss");
 
 // bosilish
@@ -260,6 +274,9 @@ inp.addEventListener("click", () => {
   section1.classList.add("hidden");
   section2.classList.add("hidden");
   section3.classList.add("hidden");
+  section4.classList.add("hidden");
+  section5.classList.add("hidden");
+  section6.classList.add("hidden");
   setTimeout(() => {
     search_modal.classList.add("translate-y-4");
   }, 50);
@@ -270,6 +287,9 @@ close_btn.addEventListener("click", () => {
   section1.classList.remove("hidden");
   section2.classList.remove("hidden");
   section3.classList.remove("hidden");
+  section4.classList.remove("hidden");
+  section5.classList.remove("hidden");
+  section6.classList.remove("hidden");
   setTimeout(() => {
     search_modal.classList.add("hidden");
   }, 100);
@@ -397,7 +417,7 @@ console.log("Books Arrdagi Render Function To'g'ri Ishladi");
 function renderBooks() {
   booksAll.forEach((book) => {
     if (book.more === true && !document.getElementById(`book-${book.name}`)) {
-      const bookDiv = document.createElement("div");
+      const bookDiv = document.createElement("div", 'book');
       bookDiv.id = `book-${book.name}`;
 
       bookDiv.innerHTML = `

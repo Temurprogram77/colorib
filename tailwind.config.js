@@ -11,6 +11,7 @@ module.exports = {
         buttonColorHover: '#CF0F0F',
         buttonColorHoverRed: '#FF1616',
         whiteColor: '#fff',
+        greyColor: '#9097A7',
         sectionColorBlue: '#252E56',
         colorMenu: '#4C4C4C',
       },

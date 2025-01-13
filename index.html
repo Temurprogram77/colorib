@@ -25,7 +25,8 @@
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <a href="#">
-        <div class="w-fit md:p-3 p-2 rounded-full bg-redColor z-40 fixed bottom-4 md:right-7 right-4 cursor-pointer hidden btn">
+        <div
+            class="w-fit md:p-3 p-2 rounded-full bg-redColor z-40 fixed bottom-4 md:right-7 right-4 cursor-pointer hidden btn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" fill="white">
                 <path
                     d="M12 4.83582L5.79291 11.0429L7.20712 12.4571L12 7.66424L16.7929 12.4571L18.2071 11.0429L12 4.83582ZM12 10.4857L5.79291 16.6928L7.20712 18.107L12 13.3141L16.7929 18.107L18.2071 16.6928L12 10.4857Z">
@@ -91,7 +92,24 @@
                     <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
                 </svg>
             </div>
-            <div class="menu_modal fixed hidden"></div>
+            <div
+                class="menu_modal active_modal fixed right-[0] duration-300 w-full h-[350px] bg-white z-50 flex justify-center items-center">
+                <div class="close_btn_menu absolute right-3 top-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" fill="currentColor">
+                        <path
+                            d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="flex flex-col w-full px-2">
+                    <a href="#" class="w-full px-3 py-1 hover:bg-greyColor rounded-lg hover:text-colorRed duration-300 font-semibold home">Home</a>
+                    <a href="#" class="w-full px-3 py-1 hover:bg-greyColor rounded-lg hover:text-colorRed duration-300 font-semibold categories">Categories</a>
+                    <a href="#" class="w-full px-3 py-1 hover:bg-greyColor rounded-lg hover:text-colorRed duration-300 font-semibold about">About</a>
+                    <a href="#" class="w-full px-3 py-1 hover:bg-greyColor rounded-lg hover:text-colorRed duration-300 font-semibold pages">Pages</a>
+                    <a href="#" class="w-full px-3 py-1 hover:bg-greyColor rounded-lg hover:text-colorRed duration-300 font-semibold blog">Blog</a>
+                    <a href="#" class="w-full px-3 py-1 hover:bg-greyColor rounded-lg hover:text-colorRed duration-300 font-semibold content">Contact</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -290,18 +308,20 @@
             </div>
         </div>
         <div
-            class="bookss flex flex-wrap md:justify-start justify-center gap-5 lg:px-4 2xl:px-0 max-w-[1300px] lg:mx-auto md:mx-6 sm:mx-5 mx-4">
+            class="bookss flex flex-wrap md:justify-start justify-evenly gap-5 lg:px-4 2xl:px-0 max-w-[1300px] lg:mx-auto md:mx-6 sm:mx-5 mx-4">
 
         </div>
         <div
-            class="btn_more font-semibold w-fit mx-auto my-4 cursor-pointer rounded-3xl border-redBorder border-2 text-colorRed lg:px-10 lg:py-3 md:px-7 md:py-2">
+            class="btn_more font-semibold w-fit mx-auto my-4 cursor-pointer rounded-3xl border-redBorder border-2 text-colorRed lg:px-10 lg:py-3 md:px-7 px-5 py-2 md:py-2">
             <span>Browse More</span>
         </div>
     </div>
 
-    <div class="max-w-[1300px] mx-auto flex lg:flex-row flex-col lg:gap-0 gap-4 2xl:px-0 px-4 justify-between mt-10">
-        <div class="bg-img1 lg:w-[49%] w-full bg-cover h-[180px] flex items-center justify-between px-12">
-            <h2 class="text-colorWhite text-[30px] w-[180px]">The History
+    <div
+        class="section4 max-w-[1300px] mx-auto flex lg:flex-row flex-col lg:gap-0 gap-4 2xl:px-0 px-4 justify-between mt-10">
+        <div
+            class="bg-img1 lg:w-[49%] w-full bg-cover md:h-[180px] sm:h-[160px] h-[140px] flex items-center justify-between px-12">
+            <h2 class="text-colorWhite md:text-[30px] sm:text-[24px] text-[20px] w-[180px]">The History
                 of Phipino</h2>
             <div
                 class="sign bg-buttonColor cursor-pointer rounded-3xl text-colorWhite font-semibold md:text-[15px] text-[14px] w-fit lg:px-8 md:px-4 px-2 lg:py-3 md:py-2 py-1">
@@ -309,8 +329,9 @@
                 <div class="old">View Details</div>
             </div>
         </div>
-        <div class="bg-img2 lg:w-[49%] w-full bg-cover h-[180px] flex items-center justify-between px-12">
-            <h2 class="text-colorWhite text-[30px]">Wilma Mumduya</h2>
+        <div
+            class="bg-img2 lg:w-[49%] w-full bg-cover md:h-[180px] sm:h-[160px] h-[140px] flex items-center justify-between px-12">
+            <h2 class="text-colorWhite md:text-[30px] sm:text-[24px] text-[20px]">Wilma Mumduya</h2>
             <div
                 class="sign bg-buttonColor cursor-pointer rounded-3xl text-colorWhite font-semibold md:text-[15px] text-[14px] w-fit lg:px-8 md:px-4 px-2 lg:py-3 md:py-2 py-1">
                 <div class="new">View Details</div>
@@ -320,7 +341,7 @@
     </div>
 
     <div
-        class="bg-img-newsletter relative z-30 mt-10 h-[320px] max-w-[1300px] mx-auto flex flex-col justify-center items-center gap-6">
+        class="section5 bg-img-newsletter mt-10 h-[320px] max-w-[1300px] mx-auto flex flex-col justify-center items-center gap-6">
         <h2 class="text-[35px] text-colorWhite">Join Newsletter</h2>
         <p class="text-colorGrey2 text-[16px] font-medium max-w-[630px] text-center md:px-0 px-2">Lorem started its
             journey with cast
@@ -337,7 +358,7 @@
         </div>
     </div>
 
-    <footer class="bg-bodyColor md:py-28 py-16">
+    <footer class="section6 bg-bodyColor md:py-28 py-16">
         <div class="max-w-[1300px] mx-auto 2xl:px-0 px-5 gap-y-8 lg:flex-nowrap flex-wrap flex justify-between">
             <div class="w-[300px] flex flex-col gap-6">
                 <a href="#" class="w-[200px]">
@@ -408,7 +429,7 @@
     <div class="bg-bodyColor text-center lg:mx-0 mx-4">
         Copyright ©2025 All rights reserved | This template is made with by Colorlib
     </div>
-<!-- 
+    <!-- 
     <div class="flex items-center justify-between max-w-[1200px] mx-auto">
         <div class="flex flex-col gap-3">
             <div class="flex justify-between items-center">

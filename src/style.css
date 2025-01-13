@@ -128,9 +128,14 @@
     width: 140px;
   }
 }
+@media screen and (max-width: 380px) {
+  .book {
+    width: 140px;
+  }
+}
 @media screen and (max-width: 340px) {
   .book {
-    width: 120px;
+    width: 130px;
   }
 }
 .book:hover {
@@ -232,4 +237,12 @@
   .bg-img-newsletter {
     margin: 0 20px;
   }
+}
+.menu_modal {
+  position: fixed;
+  top: 0;
+}
+.active_modal {
+  position: fixed;
+  top: -350px;
 }
