@@ -1,4 +1,4 @@
-.sign,
+/* .sign,
 .sign *,
 .sign :after,
 .sign :before,
@@ -6,7 +6,7 @@
 .sign:before {
   border: 0 solid;
   box-sizing: border-box;
-}
+} */
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -162,9 +162,6 @@
   background: #ff1616;
   color: #fff;
 }
-
-/* btnt */
-
 .btn_more,
 .btn_more *,
 .btn_more:after,
