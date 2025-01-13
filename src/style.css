@@ -91,6 +91,11 @@
 .image3 {
   background-image: url(../assets/img/hero3.webp);
 }
+@media screen and (max-width: 800px) {
+  .image1, .image2, .image3 {
+    background-size: cover;
+  }
+}
 .splide__arrow--next svg:hover,
 .splide__arrow--prev svg:hover {
   fill: #ff1616;
@@ -114,6 +119,26 @@
 .book {
   width: 200px;
   cursor: pointer;
+}
+@media screen and (max-width: 1536px) {
+  .book {
+    width: 190px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .book {
+    width: 160px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .book {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .book {
+    width: 120px;
+  }
 }
 .book:hover {
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.126);

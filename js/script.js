@@ -235,8 +235,10 @@ const booksAll = [
 
 let data = document.querySelector(".data");
 let inp = document.querySelector("#search-inp");
+let inp_btn = document.querySelector(".search");
 let section1 = document.querySelector(".section1");
 let section2 = document.querySelector(".section2");
+let section3 = document.querySelector(".section3");
 let books2 = document.querySelector(".bookss");
 
 // bosilish
@@ -248,6 +250,7 @@ inp.addEventListener("click", () => {
   search_modal.classList.remove("hidden");
   section1.classList.add("hidden");
   section2.classList.add("hidden");
+  section3.classList.add("hidden");
   setTimeout(() => {
     search_modal.classList.add("translate-y-4");
   }, 50);
@@ -257,6 +260,7 @@ close_btn.addEventListener("click", () => {
   search_modal.classList.remove("translate-y-4");
   section1.classList.remove("hidden");
   section2.classList.remove("hidden");
+  section3.classList.remove("hidden");
   setTimeout(() => {
     search_modal.classList.add("hidden");
   }, 100);
@@ -386,22 +390,23 @@ function renderBooks() {
     if (book.more === true && !document.getElementById(`book-${book.name}`)) {
       const bookDiv = document.createElement("div");
       bookDiv.id = `book-${book.name}`;
-      bookDiv.classList.add("bg-whiteColor", "max-w-fit", "book");
 
       bookDiv.innerHTML = `
-        <img src="${book.img}" class="" alt="book">
-        <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
-        <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
-        <div class="flex items-center ml-2">
-          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-          <img src="assets/svg/star.png" class="w-[20px]" alt="star">
-        </div>
-        <div class="flex justify-between items-end mx-3 pb-3">
-          <p class="text-[14px] font-normal">(${book.review} Review)</p>
-          <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+        <div class="bg-whiteColor book">
+            <img src="${book.img}" class="" alt="book">
+            <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
+            <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
+            <div class="flex items-center ml-2">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+                <img src="assets/svg/star.png" class="w-[20px]" alt="star">
+            </div>
+            <div class="flex justify-between items-end mx-3 pb-3">
+                <p class="text-[14px] font-normal">(${book.review} Review)</p>
+                <h5 class="text-[20px] text-colorRed font-semibold">${book.price}</h5>
+            </div>
         </div>
       `;
       books2.appendChild(bookDiv);
@@ -616,7 +621,7 @@ inp.addEventListener("input", () => {
     searchText.forEach((book) => {
       const card = document.createElement("div");
       card.innerHTML = `
-        <div class="bg-whiteColor max-w-fit book">
+        <div class="bg-whiteColor sm:max-w-fit w-full book">
             <img src="${book.img}" class="" alt="book">
             <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
             <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
