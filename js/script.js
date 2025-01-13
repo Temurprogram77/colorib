@@ -233,6 +233,15 @@ const booksAll = [
   },
 ];
 
+// menu btn
+
+let menu_modal = document.querySelector('.menu_modal')
+let menu = document.querySelector('.menu')
+
+menu.addEventListener('click', () => {
+  menu_modal.classList.toggle('hidden')
+})
+
 let data = document.querySelector(".data");
 let inp = document.querySelector("#search-inp");
 let inp_btn = document.querySelector(".search");
