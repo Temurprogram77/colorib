@@ -78,8 +78,8 @@
             <div
                 class="welcomeMsg hidden cursor-pointer w-[40px] h-fit py-2 text-white text-center rounded-full bg-redColor">
             </div>
-            <div id="modal" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden z-[999]">
-                <div class="w-80 p-6 bg-white rounded-md shadow-lg fixed right-28 top-20 z-[99]">
+            <div id="modal" class="fixed top-0 inset-0 items-center justify-center bg-black bg-opacity-50 hidden z-[999]">
+                <div class="w-80 p-6 bg-white rounded-md shadow-lg fixed lg:right-28 md:right-20 sm:right-10 right-2 top-20 z-[99]">
                     <p id="modalEmail" class="text-gray-700 font-semibold text-lg mb-4"></p>
                     <button id="logoutBtn"
                         class="w-full px-4 py-2 text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none">
@@ -461,14 +461,9 @@
             <img src="assets/img/ono.webp" alt="ono">
         </div>
     </div> -->
-    <script>
-        var loader = document.getElementById("preloader")
-
-        window.addEventListener("load", () => {
-            loader.style.display = "none"
-        })
-    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="js/loader.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/script.js"></script>
     <script src="js/button.js"></script>
