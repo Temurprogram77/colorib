@@ -1066,6 +1066,16 @@ video {
   padding-right: 1.25rem;
 }
 
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
 .pb-14 {
   padding-bottom: 3.5rem;
 }
@@ -1135,6 +1145,10 @@ video {
   line-height: 1.75rem;
 }
 
+.text-\[40px\] {
+  font-size: 40px;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -1175,6 +1189,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .shadow-lg {
@@ -1240,8 +1258,22 @@ video {
     flex-wrap: nowrap;
   }
 
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .sm\:text-\[23px\] {
     font-size: 23px;
+  }
+
+  .sm\:text-\[40px\] {
+    font-size: 40px;
   }
 }
 
@@ -1323,6 +1355,16 @@ video {
     padding-bottom: 0.75rem;
   }
 
+  .md\:py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .md\:text-start {
     text-align: start;
   }
@@ -1337,6 +1379,10 @@ video {
 
   .md\:text-\[30px\] {
     font-size: 30px;
+  }
+
+  .md\:text-\[50px\] {
+    font-size: 50px;
   }
 }
 
