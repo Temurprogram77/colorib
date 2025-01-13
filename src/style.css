@@ -83,7 +83,9 @@
   background-image: url(../assets/img/hero3.webp);
 }
 @media screen and (max-width: 800px) {
-  .image1, .image2, .image3 {
+  .image1,
+  .image2,
+  .image3 {
     background-size: cover;
   }
 }
@@ -142,12 +144,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black url("/assets/img/loading2.gif") center center no-repeat;
+  background: white url("/assets/img/loader.gif") center center no-repeat;
   background-size: 20%;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 10000;
+}
+@media screen and (max-width: 768px) {
+  #preloader {
+    background-size: 35%;
+  }
 }
 .activeBtn {
   background: #ff1616;
@@ -198,7 +205,7 @@
   color: #fff;
 }
 .btn_more:before {
-  background: #FF1616;
+  background: #ff1616;
   content: "";
   inset: 0;
   position: absolute;
@@ -209,13 +216,13 @@
   --progress: 0;
 }
 .bg-img2 {
-  background-image: url('/assets/img/image1.webp');
+  background-image: url("/assets/img/image1.webp");
 }
 .bg-img1 {
-  background-image: url('/assets/img/image2.webp');
+  background-image: url("/assets/img/image2.webp");
 }
 .bg-img-newsletter {
-  background-image: url('/assets/img/bg-img.webp');
+  background-image: url("/assets/img/bg-img.webp");
 }
 .icon:hover svg {
   transition: fill 0.3s;
