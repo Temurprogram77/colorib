@@ -220,3 +220,21 @@
 .btn_more:hover:before {
   --progress: 0;
 }
+.bg-img2 {
+  background-image: url('/assets/img/image1.webp');
+}
+.bg-img1 {
+  background-image: url('/assets/img/image2.webp');
+}
+.bg-img-newsletter {
+  background-image: url('/assets/img/bg-img.webp');
+}
+.icon:hover svg {
+  transition: fill 0.3s;
+  fill: #fff;
+}
+@media screen and (max-width: 1536px) {
+  .bg-img-newsletter {
+    margin: 0 20px;
+  }
+}
