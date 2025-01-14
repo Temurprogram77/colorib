@@ -5,10 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign In</title>
+  <link rel="stylesheet" href="/src/minify.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+  <div id="preloader">
+    <iframe class="hidden" src="https://www.youtube.com/embed/KVbrHTRxgsk?si=JHwyqQqHoIJ9Z0KV"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe class="hidden" width="560"
+      height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk?si=JHwyqQqHoIJ9Z0KV" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
   <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="w-full max-w-md p-8 space-y-6 bg-white shadow-md rounded-lg md:mx-0 mx-3">
       <h2 class="text-2xl font-bold text-center text-gray-800">Sign In</h2>
@@ -45,6 +57,7 @@
   </div>
 
   <script src="/js/regEx.js"></script>
+  <script src="/js/loader.js"></script>
   <script src="js/button.js"></script>
 </body>
 
