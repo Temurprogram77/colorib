@@ -421,7 +421,7 @@ function renderBooks() {
       bookDiv.id = `book-${book.name}`;
 
       bookDiv.innerHTML = `
-        <div class="bg-whiteColor book">
+        <div class="bg-whiteColor book clicked_card">
             <img src="${book.img}" class="" alt="book">
             <h2 class="ml-3 mt-3 text-[20px] font-semibold">${book.name}</h2>
             <p class="ml-3 text-colorGrey2 text-[13px] font-normal">${book.after}</p>
@@ -455,6 +455,13 @@ btnMore.addEventListener("click", () => {
 renderBooks();
 
 console.log("Render Function To'g'ri Ishladi");
+
+let clicked_card = document.querySelector('.clicked_card');
+
+clicked_card.addEventListener('click', () => {
+  console.log("salom");
+  window.location.href('/public/card.html')
+})
 
 // btnMore.addEventListener("click", () => {
 //   console.log("salom");
