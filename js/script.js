@@ -456,11 +456,11 @@ renderBooks();
 
 console.log("Render Function To'g'ri Ishladi");
 
-let clicked_card = document.querySelector('.clicked_card');
+let clicked_card = document.querySelectorAll('.clicked_card');
 
 clicked_card.addEventListener('click', () => {
   console.log("salom");
-  window.location.href('/public/card.html')
+  window.location.href = "../public/card.html";
 })
 
 // btnMore.addEventListener("click", () => {
